@@ -20,15 +20,8 @@ if (is.list(subset_data)) {
 subset_data[, 3] <- as.numeric(subset_data[, 3])
 subset_data[, 6] <- as.numeric(subset_data[, 6])
 
-# Create histogram
-hist(subset_data[, 3], 
-     col = "red",
-     xlab = "Global Active Power (Kilowatts)",
-     ylab = "Frequency",
-     main = "Global Active Power")
-
 # Save plot to PNG file with specified dimensions
-png("plot1.png", width = 480, height = 480)
+png(filename= "plot1.png", width = 480, height = 480)
 hist(subset_data[, 3], 
      col = "red",
      xlab = "Global Active Power (Kilowatts)",
